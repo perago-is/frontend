@@ -17,7 +17,7 @@ const Footer = () => {
 
           <br />
           <a href="#" className="mr-4">
-            &copy; 2024 TIRA Trading PLC All Rights Reserved!
+            &copy; 2024 Dereje Senay All Rights Reserved!
           </a>
         </div>
 
