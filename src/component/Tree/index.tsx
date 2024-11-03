@@ -18,20 +18,19 @@ const TreeNode: React.FC<TreeNodeProps> = ({ node }) => {
   const router = useNavigate();
   const dispatch = useDispatch();
 
-  // Access the expanded state from Redux using useSelector
+  
   const collapsed = useSelector<RootState, boolean>(
     (state) => state.treeState[node.id] || false
   );
-  const toggleExpand = () => {
-    // Dispatch the toggleNodeExpansion action with the node ID
+  const toggleExpand = () => {    
     dispatch(toggleNodeExpansion(node.id));
   };
   const handleNodeClick = (id: number) => {
     router(`/role/${id}`);
   };
   return (
-    <div className="pl-2 relative">
-      <div className="flex items-center gap-x-1">
+    <div className="pl-2 sm:pl-4 md:pl-6 relative">
+  <div className="flex items-center gap-x-1 sm:gap-x-2 md:gap-x-4">
         {node.children.length > 0 ? (
           <span onClick={toggleExpand}>
             {collapsed ? <AiOutlinePlusSquare /> : <AiOutlineMinusSquare />}
@@ -45,7 +44,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({ node }) => {
         >
           {node.name}
           {node.children.length > 0 && (
-            <span className="font-normal bg-blue-500 text-white px-4 py-0.5 rounded-md">
+            <span className="font-normal bg-primary text-white px-4 py-0.5 rounded-md">
               {node.children.length}
             </span>
           )}
@@ -55,7 +54,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({ node }) => {
         <div className="pl-8">
           {node.children.map((childNode, index) => (
             <div key={index}>
-              <div className="absolute left-3.5 top-7 bottom-0 w-0.5 bg-green-400"></div>
+              <div className="absolute left-3.5 top-7 bottom-0 w-0.5 bg-secondary"></div>
               <TreeNode node={childNode} />
             </div>
           ))}

@@ -1,13 +1,11 @@
-// components/HorizontalLine.js
-
 const Horizontal = () => {
   return (
-    <div>
+    <div className="container">
       <hr
         style={{
           borderTop: "2px solid black",
           width: "100%",
-          margin: "20px 0",
+          margin: "5px 0",
         }}
       />
     </div>

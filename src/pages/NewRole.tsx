@@ -11,10 +11,10 @@ import { TbPlus } from "react-icons/tb";
 const schema = yup
   .object({
     name: yup.string().required("Role Name is required"),
-    parentId: yup.string().required("Parent name is required"),
+    parentId: yup.string(),
     description: yup.string().required("Role Description is required"),
   })
-  .required();
+ 
 
 const roleToOptionFormatter = (
   roles: { id: number; name: string; description: string }[]
@@ -68,17 +68,17 @@ export default function NewRole() {
   }, []);
   return (
     <div className="mt-10 ml-10">
-      <header className="py-4 px-3 h-20 bg-white text-2xl flex items-center font-bold mb-10 gap-x-4">
-        <TbPlus size={30} /> Add a New Roles for Tira Trading PLC
+      <header className="py-4 px-3 h-20 text-2xl flex items-center font-bold mb-10 gap-x-4">
+        <TbPlus size={30} /> Add a New Roles for Perago Systems
       </header>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col mx-8 gap-y-3 p-4 border w-1/3 mt-8 shadow bg-cyan-400"
+        className="flex flex-col mx-8 gap-y-3 p-4 border w-1/3 mt-8 shadow bg-secondary"
       >
-        <h2 className="px-5 py-1.5 border-b mb-4 text-xl font-semibold">
+        <h2 className="px-5 py-1.5 border-b mb-4 text-xl font-semibold text-white">
           Role
         </h2>
-        <div className="flex flex-col mx-8 gap-y-3 w-full">
+        <div className="flex flex-col mx-8 gap-y-3 w-full text-white">
           <TextInput
             label="Role Name"
             placeholder="CEO"
@@ -110,12 +110,11 @@ export default function NewRole() {
             )}
           />
           <Button
-            variant="filled"
-            color="purple"
-            classNames={{ root: "bg-blue-500 w-1/5 self-end mr-24 mt-4" }}
-            type="submit" // Add type attribute for the submit button
+            variant="filled"           
+            className="bg-primary w-full self-end mr-24 mt-4"
+            type="submit" 
           >
-            AddRole
+            Add New Role
           </Button>
         </div>
       </form>

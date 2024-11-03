@@ -25,7 +25,7 @@ const Roles = () => {
     <div className="flex flex-col mt-10 ml-20 h-[70vh]">
       <header className="py-4 px-3 h-20 bg-white text-2xl font-bold mb-10 gap-x-4 flex items-center justify-between">
         <span className="flex items-center gap-x-4">
-          <TbListTree size={30} /> List of Roles for TIRA
+          <TbListTree size={30} /> List of Roles for Perago Systems
         </span>
         <TbPlus
           onClick={() => navigate("/new-role")}

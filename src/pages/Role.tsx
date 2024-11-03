@@ -19,7 +19,7 @@ export default function Role() {
       <header className="py-4 px-3 h-20 bg-white text-2xl flex items-center justify-between font-bold mb-10 gap-x-4">
         <div className="flex items-center gap-x-3">
           <Button
-            className="bg-green-600"
+            className="bg-gray-500"
             onClick={() => {
               navigate(-1);
               dispatch(hideEdit());

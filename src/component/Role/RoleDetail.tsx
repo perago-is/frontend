@@ -57,14 +57,14 @@ const RoleDetail = ({ id }: { id: any }) => {
         <div className="flex justify-end">
           <button
             onClick={() => dispatch(toggleEdit())}
-            className="bg-green-600 text-white px-4 py-2 rounded mr-2 hover:bg-blue-600"
+            className="bg-secondary text-white px-4 py-2 rounded mr-2 hover:bg-blue-600"
           >
             Edit
           </button>
 
           <button
             onClick={handleDelete}
-            className="bg-red-900 text-white px-4 py-2 rounded hover:bg-red-600"
+            className="bg-primary text-white px-4 py-2 rounded hover:bg-red-600"
           >
             Delete
           </button>
@@ -80,7 +80,7 @@ const RoleDetail = ({ id }: { id: any }) => {
             >
               <div>
                 {role.children && role.children.length > 0 ? (
-                  <p className="text-red-700">
+                  <p className="text-primary">
                     You can not delete a role that has childrens. Please Delete
                     childrens first
                   </p>

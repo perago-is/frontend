@@ -11,8 +11,8 @@ import { MantineProvider } from "@mantine/core";
 import Layout from "./component/Layout";
 import { ToastContainer } from "react-toastify";
 import Footer from "./component/Footer";
-import Horizontal from "./component/Horizontal";
 import Header from "./component/Header";
+import Horizontal from "./component/Horizontal";
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
           </Layout>
         </MantineProvider>
       </Router>
+      <Horizontal />
       <Footer />
     </Provider>
   );

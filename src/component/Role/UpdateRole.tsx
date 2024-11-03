@@ -145,8 +145,8 @@ const onSubmit = (data: any) => {
         <div className="flex items-center justify-end ">
           <Button
             variant="filled"
-            color="red"
-            classNames={{ root: "bg-red-500 self-end mr-4 mt-4" }}
+            color="orange"
+            classNames={{ root: "bg-orange-500 self-end mr-4 mt-4" }}
             type="button"
             onClick={() => disptch(hideEdit())}
           >
@@ -154,8 +154,8 @@ const onSubmit = (data: any) => {
           </Button>
           <Button
             variant="filled"
-            color="green"
-            classNames={{ root: "bg-blue-500 self-end mr-24 mt-4" }}
+            color="blue"
+            classNames={{ root: "bg-blue-900 self-end mr-24 mt-4" }}
             type="submit"
           >
             Update
